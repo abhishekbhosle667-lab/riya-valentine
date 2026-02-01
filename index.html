@@ -91,10 +91,9 @@ button {
 </div>
 
 <!-- BTS Butterfly (hidden player) -->
-<iframe id="music" width="0" height="0"
-src="https://www.youtube.com/embed/XiJb0K8p9PU?autoplay=1&loop=1&playlist=XiJb0K8p9PU"
-allow="autoplay">
-</iframe>
+<audio id="music" preload="auto">
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+</audio>
 
 <script>
 const noBtn = document.getElementById("no");
@@ -110,6 +109,7 @@ noBtn.addEventListener("mouseover", () => {
 // Yes click
 yesBtn.addEventListener("click", () => {
   message.style.display = "block";
+  music.play();
   startFireworks();
 });
 
